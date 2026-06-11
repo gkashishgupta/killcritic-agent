@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KILLCRITIC - Brutal Honesty for Startups</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero-panel">
+      <div class="hero-content">
+        <p class="eyebrow">🔥 KILLCRITIC</p>
+        <h1>Brutally Honest Startup Analysis</h1>
+        <p class="hero-copy">Stop pitching to people who sugarcoat. Get real, professional, no-nonsense feedback on your startup idea. We cut through the BS and tell you exactly what your idea is worth - flaws and all.</p>
+      </div>
+      <div class="hero-badge">
+        <span class="badge-item">💀 No Sugar Coating</span>
+        <span class="badge-item">🎯 Professional</span>
+        <span class="badge-item">⚡ Savage Feedback</span>
+      </div>
+    </header>
+
+    <main class="content-grid">
+      <section class="input-card">
+        <div class="card-header">
+          <div>
+            <p class="section-label">🚀 Your Idea</p>
+            <h2>Pitch your startup concept</h2>
+            <p class="sub-text">Be specific about problem, solution, market, and differentiation. The more real you are, the more brutal (and useful) our feedback.</p>
+          </div>
+        </div>
+        <textarea id="ideaInput" placeholder="e.g., An AI tool that helps developers write better code reviews in half the time. Target: engineering teams at tech companies with 50+ developers. Revenue: $500/month per team subscription..." rows="8"></textarea>
+        <p id="examplePrompt" class="example-prompt">e.g., An AI tool that helps developers write better code reviews in half the time...</p>
+        <div class="button-group">
+          <button id="analyzeButton" class="btn-primary">Get Brutally Honest Feedback</button>
+          <button id="clearButton" class="btn-secondary">Clear</button>
+        </div>
+        <div id="charCount" class="char-count"></div>
+      </section>
+
+      <section class="results-card">
+        <div class="card-header">
+          <div>
+            <p class="section-label">💀 Analysis Results</p>
+            <h2>Unfiltered Assessment</h2>
+          </div>
+          <button id="copyButton" class="btn-icon" title="Copy results">📋</button>
+        </div>
+        <div id="resultsContainer" class="results-container">
+          <div class="empty-state">
+            <p class="empty-icon">🔥</p>
+            <p>Submit your startup idea and receive an unflinching, professional analysis of its viability</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="errorDialog" class="error-dialog hidden">
+      <div class="error-content">
+        <p id="errorMessage"></p>
+        <button onclick="closeError()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
